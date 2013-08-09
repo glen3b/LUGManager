@@ -17,6 +17,8 @@ namespace LocalUsersAndGroupsManagementUtility
         {
             Context = pc;
             InitializeComponent();
+            MaximumSize = Size;
+            MinimumSize = Size;
         }
 
         private void createButton_Click(object sender, EventArgs e)

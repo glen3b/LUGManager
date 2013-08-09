@@ -18,6 +18,8 @@ namespace LocalUsersAndGroupsManagementUtility
             changing = up;
             InitializeComponent();
             accountNameTextBox.Text = changing.Name;
+            MaximumSize = Size;
+            MinimumSize = Size;
         }
 
         private void changePwdButton_Click(object sender, EventArgs e)

@@ -37,7 +37,8 @@ namespace LocalUsersAndGroupsManagementUtility
         {
             InitializeComponent();
             principal = up;
-            
+            MaximumSize = Size;
+            MinimumSize = Size;
         }
 
         private void GroupList_Load(object sender, EventArgs e)

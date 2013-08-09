@@ -15,7 +15,8 @@ namespace LocalUsersAndGroupsManagementUtility
         public Form1()
         {
             InitializeComponent();
-            
+            MaximumSize = Size;
+            MinimumSize = Size;
         }
 
         PrincipalContext localMachine;

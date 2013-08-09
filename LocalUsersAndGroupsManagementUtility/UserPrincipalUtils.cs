@@ -22,7 +22,8 @@ namespace LocalUsersAndGroupsManagementUtility
             Text += up.Name;
             Principal = up;
             accountLockCheckBox.Checked = up.IsAccountLockedOut();
-            
+            MaximumSize = Size;
+            MinimumSize = Size;
         }
 
         private void passwordChangeButton_Click(object sender, EventArgs e)
