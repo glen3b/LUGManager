@@ -26,6 +26,9 @@ namespace LocalUsersAndGroupsManagementUtility
             if (confirmPwdTextBox.Text != pwdTextBox.Text)
             {
                 MessageBox.Show("The password does not match the password confirmation.", "Error creating user", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                pwdTextBox.Clear();
+                confirmPwdTextBox.Clear();
+                pwdTextBox.Focus();
                 return;
             }
             try

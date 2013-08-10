@@ -192,6 +192,10 @@ namespace LocalUsersAndGroupsManagementUtility
                 new CreateUser(localMachine).ShowDialog(this);
 
             }
+            else
+            {
+                new CreateGroup(localMachine).ShowDialog(this);
+            }
 
             Reset(true, true);
         }
