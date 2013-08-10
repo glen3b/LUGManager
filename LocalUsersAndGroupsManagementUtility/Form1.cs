@@ -62,7 +62,15 @@ namespace LocalUsersAndGroupsManagementUtility
 
         private void lugViewTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            if (lugViewTypeComboBox.SelectedIndex == 0)
+            {
+                typeSpecificOptionButton.Text = "Members";
+            }
+            else
+            {
+                typeSpecificOptionButton.Text = "More Options";
+
+            }
             Reset(true, true);
         }
 
@@ -77,8 +85,8 @@ namespace LocalUsersAndGroupsManagementUtility
 
                 currentObj.Delete();
                 itemsListBox.Items.RemoveAt(lugViewTypeComboBox.SelectedIndex);
-                
-                
+
+
                 if (lugViewTypeComboBox.SelectedIndex == 0)
                 {
                     AllGroups.RemoveAt(itemsListBox.SelectedIndex);
@@ -87,7 +95,7 @@ namespace LocalUsersAndGroupsManagementUtility
                 {
                     AllUsers.RemoveAt(itemsListBox.SelectedIndex);
                 }
-                
+
                 currentObj = null;
                 itemsListBox.SelectedIndex = -1;
                 Reset(true, true);
@@ -113,7 +121,7 @@ namespace LocalUsersAndGroupsManagementUtility
 
             if (isMajor)
             {
-                
+
                 principalPropertyGrid.SelectedObject = null;
                 if (lugViewTypeComboBox.SelectedIndex == 0)
                 {
@@ -182,7 +190,7 @@ namespace LocalUsersAndGroupsManagementUtility
             if (lugViewTypeComboBox.SelectedIndex == 1)
             {
                 new CreateUser(localMachine).ShowDialog(this);
-                
+
             }
 
             Reset(true, true);
